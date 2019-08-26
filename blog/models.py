@@ -13,3 +13,6 @@ class Post(models.Model):
 
     def __str__(self): #post 목록 이 름이 어떻게 출력되는지 설정
         return '{} :: {}'.format(self.title, self.author)
+
+    def get_absolute_url(self): # admin에서 post추가에 view on site라는 버튼이 추가됨
+        return '/blog/{}/'.format(self.pk)
