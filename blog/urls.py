@@ -18,6 +18,8 @@ from . import views
 
 urlpatterns = [
 #    path('', views.index),
-    path('', views.PostList.as_view())
+    path('', views.PostList.as_view()),
+    #path('<int:pk>/', views.post_detail) # int타입의 숫자가 들어올때 views.post_detail으로 가라.
+    path('<int:pk>/', views.PostDetail.as_view())  # int타입의 숫자가 들어올때 views.post_detail으로 가라.
 
 ]
