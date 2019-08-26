@@ -120,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# model.py의 head_image = models.ImageField(upload_to='blog/', blank=True) 의 이미지 저장 경로를 설정해 준다.
+MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
+
+# 이미지 파일 업로드 된건 /media/ 를 지나가도록!
+MEDIA_URL = '/media/'
